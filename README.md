@@ -31,7 +31,11 @@ Avg Order Value = DIVIDE([Total Sales], [Total Orders], 0)
 
 Profit = SUM(Retail_sales[total_sale]) - SUM(Retail_sales[cogs])
 
-Profit % = DIVIDE([Profit], [Total Sales], 0)
+Profit % = DIVIDE([Profit], [Total Sales], 0)```
+
+
+
+
 ### How to Use
 
 Download the Power BI file .pbix.

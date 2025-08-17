@@ -1,31 +1,50 @@
-
-# <PROJECT TITLE: e.g., Retail/Superstore Sales Power BI Dashboard>
+# Retail Sales Analysis (Power BI)
 
 ## Overview
-This project presents an interactive Power BI dashboard analyzing <brief domain, e.g., retail/superstore> sales to uncover trends, key KPIs, and customer/category performance. It covers data cleaning (Power Query), modeling, DAX measures, and visual storytelling.
+This project presents an interactive Power BI dashboard analyzing retail sales data to uncover key business insights.  
+The dashboard provides an overview of sales performance, customer behavior, and product category trends.  
+Data was cleaned and transformed using Power Query, and DAX measures were created for KPIs and advanced analysis.
 
-## Highlights
-- **KPIs:** Total Sales, Total Orders, Avg Order Value, Profit %, Returns (if any)
-- **Trends:** Monthly/Weekly sales, seasonality
-- **Segments:** Category/Sub-category performance, Region/City, Customer segment
-- **Interactivity:** Slicers for Date/Region/Category
+## Project Highlights
+- **KPIs:** Total Sales, Total Orders, Average Order Value, Profit %  
+- **Trends:** Monthly sales trend, peak sales months  
+- **Customer Insights:** Customer demographics and purchasing patterns  
+- **Category Analysis:** Top-performing product categories and sub-categories  
+- **Interactivity:** Filters and slicers for region, category, and time  
+
+## Project Files
+- `Retail_Sales_Dashboard.pbix` — Power BI dashboard file  
+- `data/retail_sales.csv` — Source dataset  
+  
 
 ## Data & Modeling
-- **Source:** `<dataset/source & link if public>`
-- **Transformations (Power Query):** type fixing, missing values handling, date table (optional), calculated columns (if any)
-- **Model:** Star schema with fact table `<FactName>` and dimension tables `<DimDate, DimProduct, DimCustomer>` (adjust to your model)
-
-## DAX (Key Measures)
-> Update table/column names to match your model.
-
+- **Source:** Retail sales dataset (CSV format)  
+- **Transformations:** Data type corrections, handling null values, and creating a proper date column  
+- **Modeling:** Star schema with fact table and dimension tables  
+- **Measures (DAX):**  
 ```DAX
-Total Sales = SUM('Sales'[total_sale])
+Total Sales = SUM(Retail_sales[total_sale])
 
-Total Orders = DISTINCTCOUNT('Sales'[order_id])
+Total Orders = COUNT(Retail_sales[transactions_id])
 
-Avg Order Value = 
-DIVIDE([Total Sales], [Total Orders], 0)
+Avg Order Value = DIVIDE([Total Sales], [Total Orders], 0)
 
-Profit = SUM('Sales'[total_sale]) - SUM('Sales'[cogs])
+Profit = SUM(Retail_sales[total_sale]) - SUM(Retail_sales[cogs])
 
 Profit % = DIVIDE([Profit], [Total Sales], 0)
+### How to Use
+
+Download the Power BI file .pbix.
+
+Open in Power BI Desktop.
+
+If required, update the dataset path:
+
+Go to Transform data → Data source settings → Change Source.
+
+Refresh the data using Home → Refresh.
+
+
+#Conclusion
+
+This Power BI dashboard serves as a data analysis project for retail sales, providing actionable insights into customer behavior, sales performance, and category trends. It demonstrates skills in Power Query, DAX, and dashboard design.

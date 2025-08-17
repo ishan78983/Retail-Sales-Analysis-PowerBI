@@ -14,7 +14,7 @@ Data was cleaned and transformed using Power Query, and DAX measures were create
 
 ## Project Files
 - `Retail_Sales_Dashboard.pbix` — Power BI dashboard file  
-- `data/retail_sales.csv` — Source dataset  
+- `SuperStore_Sales_Dataset.csv` — Source dataset  
   
 
 ## Data & Modeling

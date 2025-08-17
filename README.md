@@ -45,7 +45,5 @@ Go to Transform data → Data source settings → Change Source.
 
 Refresh the data using Home → Refresh.
 
-
-#Conclusion
-
+## Conclusion
 This Power BI dashboard serves as a data analysis project for retail sales, providing actionable insights into customer behavior, sales performance, and category trends. It demonstrates skills in Power Query, DAX, and dashboard design.
